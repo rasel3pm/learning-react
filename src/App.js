@@ -2,24 +2,54 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const nayoks=['Manna','riyaj','jit','siyam','rasel']
+    const products=[
+        {name:'photshop',price:'200 tk'},
+        {name:'web cut',price:'300 tk'}
+    ]
+
+    const friends=[
+        {name:'shofiq', age:20,mobile:'019182'}
+    ]
+
+
+    return (<div className="App">
+
+        <ul>
+            {
+                nayoks.map(nayok=><li>{nayok}</li>)
+            }
+        </ul>
+
+        <ul>
+            {
+                products.map(product=> <li>{product.price}</li>)
+            }
+        </ul>
+        <Cards></Cards>
+
+        </div>);
 }
 
 export default App;
+
+
+// card 
+
+function Cards(){
+    return(
+        <div className='mycard'>
+            <div className="item">
+                <h1>Hellow World</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, vel.</p>
+                <button>Click Here</button>
+            </div>
+            <div className="item">
+                <h1>Hellow World</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, vel.</p>
+                <button>Click Here</button>
+            </div>
+        </div>
+    )
+}
