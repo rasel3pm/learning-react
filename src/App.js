@@ -1,55 +1,18 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/header/Header';
+import HeroSection from './Components/header/HeroSection/HeroSection';
 
 function App() {
-
-    const nayoks=['Manna','riyaj','jit','siyam','rasel']
-    const products=[
-        {name:'photshop',price:'200 tk'},
-        {name:'web cut',price:'300 tk'}
-    ]
-
-    const friends=[
-        {name:'shofiq', age:20,mobile:'019182'}
-    ]
-
-
     return (<div className="App">
+        <Header></Header>
+        <HeroSection></HeroSection>
+        <Footer></Footer>
 
-        <ul>
-            {
-                nayoks.map(nayok=><li>{nayok}</li>)
-            }
-        </ul>
-
-        <ul>
-            {
-                products.map(product=> <li>{product.price}</li>)
-            }
-        </ul>
-        <Cards></Cards>
-
-        </div>);
+    </div>);
 }
 
 export default App;
 
-
-// card 
-
-function Cards(){
-    return(
-        <div className='mycard'>
-            <div className="item">
-                <h1>Hellow World</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, vel.</p>
-                <button>Click Here</button>
-            </div>
-            <div className="item">
-                <h1>Hellow World</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, vel.</p>
-                <button>Click Here</button>
-            </div>
-        </div>
-    )
-}
